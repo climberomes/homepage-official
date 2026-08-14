@@ -308,6 +308,8 @@ export function cleanServiceGroups(groups) {
           firstDayInWeek,
           integrations,
           maxEvents,
+          pastMonths,
+          futureMonths,
           showTime,
           previousDays,
           view,
@@ -671,6 +673,8 @@ export function cleanServiceGroups(groups) {
           if (firstDayInWeek) widget.firstDayInWeek = firstDayInWeek;
           if (view) widget.view = view;
           if (maxEvents) widget.maxEvents = maxEvents;
+          if (pastMonths !== undefined) widget.pastMonths = pastMonths;
+          if (futureMonths !== undefined) widget.futureMonths = futureMonths;
           if (previousDays) widget.previousDays = previousDays;
           if (showTime) widget.showTime = showTime;
           if (timezone) widget.timezone = timezone;

@@ -152,6 +152,7 @@ import urbackup from "./urbackup/widget";
 import vikunja from "./vikunja/widget";
 import wallos from "./wallos/widget";
 import watchtower from "./watchtower/widget";
+import wgdashboard from "./wgdashboard/widget";
 import wgeasy from "./wgeasy/widget";
 import whatsupdocker from "./whatsupdocker/widget";
 import xteve from "./xteve/widget";
@@ -318,6 +319,7 @@ const widgets = {
   vikunja,
   wallos,
   watchtower,
+  wgdashboard,
   wgeasy,
   whatsupdocker,
   xteve,

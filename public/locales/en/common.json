@@ -1037,6 +1037,13 @@
         "disabled": "Disabled",
         "total": "Total"
     },
+    "wgdashboard": {
+        "connectedpeers": "Connected Users",
+        "totalpeers": "Total Users",
+        "datareceive": "Data Rx",
+        "datasent": "Data Tx",
+        "datatotal": "Data Total"
+    },
     "swagdashboard": {
         "proxied": "Proxied",
         "auth": "With Auth",

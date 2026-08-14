@@ -60,12 +60,18 @@ export default function Component({ service }) {
     };
 
     if (showDate) {
-      constructedParams.start = showDate.minus({ months: 3 }).toFormat("yyyy-MM-dd");
-      constructedParams.end = showDate.plus({ months: 3 }).toFormat("yyyy-MM-dd");
+      // Allow configurable past/future months, defaulting to 3 months each
+      const pastMonths = widget?.pastMonths !== undefined ? widget.pastMonths : 3;
+      const futureMonths = widget?.futureMonths !== undefined ? widget.futureMonths : 3;
+
+      constructedParams.start = showDate.minus({ months: pastMonths }).toFormat("yyyy-MM-dd");
+      constructedParams.end = showDate.plus({ months: futureMonths }).toFormat("yyyy-MM-dd");
+
+      console.log("Calendar params:", { view: widget?.view, PM: pastMonths, WPM: widget?.pastMonths, FM: futureMonths, WFM: widget?.futureMonths, start: constructedParams.start, end: constructedParams.end });
     }
 
     return constructedParams;
-  }, [showDate]);
+  }, [showDate, widget?.view, widget?.pastMonths, widget?.futureMonths]);
 
   // Load active integrations
   const integrations = useMemo(
